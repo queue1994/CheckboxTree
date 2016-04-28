@@ -1,0 +1,14 @@
+.checkboxtree ul {
+  list-style-type: none;
+  list-style: none;
+}
+
+.checkboxtree input {
+  height: 20px;
+  width: 20px;
+}
+
+.checkboxtree label{
+  margin-left: 5px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
