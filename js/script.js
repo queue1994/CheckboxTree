@@ -57,6 +57,7 @@ function updateParents(node){
   var sibs = getCheckBoxSiblings(node);
   var allUnchecked = true;
 
+/*
   sibs.forEach(function(iter){
     if(iter.checked)
       allUnchecked = false;
@@ -67,4 +68,9 @@ function updateParents(node){
     parent.checked = false;
     updateParents(parent);
   }
+  */
+
+  var parent = getCheckBoxParent(node);
+    parent.checked = false;
+    updateParents(parent);
 }
