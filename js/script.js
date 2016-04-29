@@ -45,12 +45,28 @@ function getCheckBoxSiblings(chb){
 }
 
 function setCheckedParents(node){
+  var sibs = getCheckBoxSiblings(node);
+  var allChecked = true;
+
+  sibs.forEach(function(iter){
+    if(!iter.checked)
+      allChecked = false;
+  });
+
+  if(allChecked){
+    var parent = getCheckBoxParent(node);
+    parent.checked = true;
+    setCheckedParents(parent);
+  }
+
+  /*
   var parent = getCheckBoxParent(node);
 
   if(parent != null){
     parent.checked = true;
     setCheckedParents(parent);
   }
+  */
 }
 
 function updateParents(node){
